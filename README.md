@@ -1,17 +1,12 @@
-# Inventory API
+# Inventory 
 
-Projeto de prática para consolidar o conceito de relacionamento **1 para N** (`hasMany` / `belongsTo`) no Sequelize, aplicado a um contexto de inventário: categorias e produtos.
+Projeto de prática de relacionamento **1 para N** (`hasMany` / `belongsTo`) no Sequelize, aplicado a categorias e produtos.
 
-## Contexto
+Construído de forma independente após aprender o conceito no projeto `task-api`, como forma de validar o aprendizado em um contexto diferente.
 
-Esse projeto foi construído de forma independente, logo após aprender o conceito de relacionamento entre tabelas em um projeto anterior (`task-api`, com Usuários e Tarefas). A ideia foi replicar o mesmo raciocínio — modelagem, associação entre models e chave estrangeira — em um domínio diferente, sem apoio direto, como forma de validar o aprendizado.
+## Tecnologias
 
-## Tecnologias utilizadas
-
-- Node.js
-- Express
-- Sequelize
-- MySQL
+Node.js · Express · Sequelize · MySQL
 
 ## Modelagem
 
@@ -19,30 +14,11 @@ Esse projeto foi construído de forma independente, logo após aprender o concei
 Category (1) → hasMany → Product (N)
 ```
 
-- Uma **categoria** pode ter vários **produtos**.
-- Cada **produto** pertence a uma única **categoria**, referenciada pela chave estrangeira `categoryId`.
-
-## Estrutura do projeto
-
-```
-backend/
-├── controllers/
-├── db/
-│   └── conn.js
-├── models/
-│   ├── associations.js   # Configuração do relacionamento hasMany/belongsTo
-│   ├── category.js
-│   └── product.js
-├── routes/
-│   └── inventoryRoutes.js
-├── .env
-├── .gitignore
-└── index.js
-```
+Uma categoria tem vários produtos; cada produto pertence a uma categoria, via chave estrangeira `categoryId`.
 
 ## Status
 
-Este projeto cobre a modelagem de dados e o relacionamento entre tabelas (validado via banco de dados). A camada de controllers/rotas não foi finalizada, já que o foco principal era consolidar o conceito de relacionamento — não entregar uma API completa.
+Modelagem e relacionamento entre tabelas concluídos e validados no banco. Controllers e rotas não foram finalizados — o foco do projeto foi consolidar o conceito de relacionamento, não entregar uma API completa.
 
 ## Autor
 
