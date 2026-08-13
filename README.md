@@ -20,6 +20,6 @@ Uma categoria tem vários produtos; cada produto pertence a uma categoria, via c
 
 Modelagem e relacionamento entre tabelas concluídos e validados no banco. Controllers e rotas não foram finalizados — o foco do projeto foi consolidar o conceito de relacionamento, não entregar uma API completa.
 
-## Autor
+
 
 Marcelo Ursulino
